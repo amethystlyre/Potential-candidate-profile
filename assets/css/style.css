@@ -53,7 +53,7 @@ header {
 
 /*Set decorative banner image*/
 .banner {
-    background-image: url("/assets/images/iron-man-banner.jpg");
+    background-image: url("../images/iron-man-banner.jpg");
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center top;
@@ -130,7 +130,7 @@ section {
 /*Main project at the top*/
 #work-profile .big-project {
     background-color: rgba(144, 20, 20, 0.744);
-    background-image: url("../assets/images/main_project.jpg");
+    background-image: url("../images/main_project.jpg");
     background-size: 100%;
     background-position: top center;
     background-blend-mode: multiply;
@@ -148,7 +148,7 @@ section {
 /*other smaller sized projects listed below*/
 #work-profile .small-projects {
     background-color: rgba(144, 20, 20, 0.744);
-    background-image: url("../assets/images/other_project.jpg");
+    background-image: url("../images/other_project.jpg");
     background-position: center center;
     background-size: 100%;
     background-blend-mode: multiply;

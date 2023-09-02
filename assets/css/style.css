@@ -1,15 +1,39 @@
-header{    
-    padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #000000;
-    color: #ffffff;
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+/*Declare variables*/
+:root {
+    --textcolorlight: #f8f6ce;
+    --textcolordark: #00008b;
+    --primarybgcolor: #000000;
+    --themecolor: #901414;
+    --linkcolor: #fbeb00;
+    --linkhlcolor: #66f366;
 }
 
+/*Set default font for whole page*/
+body {
+    font-family: 'Kanit', Arial, sans-serif;
+
+}
+
+/*Set header properties*/
+header {
+    padding: 20px;
+    background-color: var(--primarybgcolor);
+    color: var(--textcolorlight);
+}
+
+/*Set header title */
+.header h1 {
+    display: inline;
+    font-size: 3.5em;
+}
+
+/*Set Nav link position in header*/
 .header nav {
     padding-top: 0;
     margin-right: 0;
     float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.25em;
 }
 
@@ -19,44 +43,46 @@ header{
 }
 
 .header nav ul li {
-    
     margin-left: 25px;
 }
 
 .header a {
-    color: #ffffff;
+    color: var(--textcolorlight);
     text-decoration: none;
 }
 
-/* body{
-    
-
-} */
-.banner{
-    background-image: url("/assets/image/iron-man-banner.jpg");
-    background-size:contain;
+/*Set decorative banner image*/
+.banner {
+    background-image: url("/assets/images/iron-man-banner.jpg");
+    background-size: auto;
     background-repeat: no-repeat;
-    background-position: center;
-    background-color: black;
-    height: 250px;
+    background-position: center top;
+    background-color: var(--primarybgcolor);
+    height: 150px;
     width: 100%;
 }
 
-.content{
+
+/*set main content as flex column*/
+.content {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-
+    background-image: radial-gradient(farthest-corner at 0px 0%,
+            rgb(255, 249, 196) 0%,
+            rgb(105, 3, 3) 100%);
 }
 
-section{
+/*set individual sections as flex rows*/
+section {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-
 }
-.content .section-title{
-    width: 20%;
+
+/*customise properties of title*/
+.content .section-title {
+    width: 30%;
     border: 1px solid;
     text-align: right;
     font-size: 3em;
@@ -67,14 +93,115 @@ section{
 
 }
 
-.section-content{
+
+/*set property of section title*/
+.section-content {
     width: 80%;
     margin: 5px;
     border: 1px solid;
     padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex: 1 1 500px;
 }
 
-#work-profile{
-    
+.section-content figure {
+    margin: 10px;
 }
 
+#work-profile .big-project {
+    background-image: url("/assets/images/wp2465902.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top left;
+    height: 50vh;
+    width: 90%;
+    border: 5px solid var(--themecolor);
+    display: flexbox;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+
+}
+
+#work-profile .small-projects {
+    background-image: url("/assets/images/wp7420966.jpg");
+    background-position: center center;
+    min-width: 50vh;
+    min-height: 200px;
+    border: 5px solid var(--themecolor);
+    display: flexbox;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1
+}
+
+#work-profile .section-content div {
+    color: var(--textcolorlight);
+    background-color: var(--themecolor);
+    display: block;
+    width: fit-content;
+    padding: 5px;
+    position: relative;
+    top: 50px;
+    left: 0px;
+
+}
+
+#work-profile .project-name {
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
+#work-profile p {
+    color: var(--textcolorlight);
+    background-color: var(--themecolor);
+    display: block;
+    padding: 5px;
+    font-size: 1em;
+}
+
+/*Customise the Contact Me links*/
+.section-content ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-shrink: 1;
+}
+
+.section-content ul li {
+    margin: 5px 20px;
+    padding: 10px;
+}
+
+.section-content a {
+    color:var(--linkcolor);
+}
+
+.section-content a:visited {
+    color:var(--linkhlcolor);
+}
+
+.section-content a:hover {
+    color:var(--linkhlcolor);
+}
+
+.section-content a:active {
+    color:var(--linkhlcolor);
+}
+
+
+
+/*Center align the footer*/
+footer h2 {
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    font-size: 1.5em;
+    background-color: var(--primarybgcolor);
+    color: var(--textcolorlight);
+}

@@ -1,6 +1,6 @@
 # Potential employee profile page
 
-A single webpage designed to showcase a potential employee candidate's work portfolios. The webpage also contains some basic information about the employee and their contact details.
+A single webpage designed to showcase a potential job candidate's work portfolios. The webpage also contains some basic information about the employee and their contact details.
 
 ## Description
 
@@ -27,11 +27,11 @@ Screenshot of webpage on narrow screen:
 * Open url link https://amethystlyre.github.io/Potential-candidate-profile/ in above mention browser
 
 ## Credits
-1. Andres Jimenez (Tutor) for HTML meta code in header:
+1. Thanks to Andres Jimenez (Tutor) for HTML meta code in header:
 
     `<meta name="viewport" content="width=device-width,initial-scale=1.0">`
 
-2. Xah Lee for twitter icon link in CSS :
+2. Thanks to Xah Lee for twitter icon link in CSS :
 
     `a[href*="twitter.com/"] {
     background:url(https://twitter.com/favicon.ico) no-repeat left center;

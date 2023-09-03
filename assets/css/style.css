@@ -129,7 +129,7 @@ section {
 /*Main project at the top*/
 #work-profile .big-project {
     background-color: rgba(144, 20, 20, 0.744);
-    background-image: url("../images/main_project.jpg");
+    background-image: url("../images/main_project_cropped.jpg");
     background-size: 100%;
     background-position: top center;
     background-blend-mode: multiply;
@@ -141,6 +141,7 @@ section {
     flex-direction: row;
     flex-wrap: wrap;
     flex-grow: 1;
+    transition: height 1s linear;
 }
 
 /*other smaller sized projects listed below*/
@@ -151,13 +152,13 @@ section {
     background-size: 100%;
     background-blend-mode: multiply;
     position: relative;
-    min-width: 50vh;
-    min-height: 40vh;
+    min-width: 40%;
+    height: 40vh;
     border: 5px solid var(--themecolor);
-    display: flexbox;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    flex-grow: 1
+    flex-grow: 1;
 }
 
 /*Add hover effect over the individual project image*/
@@ -248,7 +249,23 @@ footer h2 {
     color: var(--textcolorlight);
 }
 
-/*Change nav list and content to display in column when screen width reduces to 748px wide*/
+/*Image tiles in the Work section changes layout when screen width is less than 992px wide*/
+@media screen and (max-width: 992px) {
+    #work-profile .big-project{
+        height: 40vh;
+        width: 90%;
+        /* when the screen resizes, transition to new height value*/
+        transition: height 1s linear;
+    }
+
+    #work-profile .small-projects{
+        min-width: 90%;
+        transition: height 1s linear;
+    }
+  }
+
+
+/*Change header and contacts lists to display vertically when screen width is less than 768px wide*/
 @media screen and (max-width: 768px) {
     /*Change nav bar to vertical and aligned to left*/
     .header{
@@ -292,11 +309,12 @@ footer h2 {
     }
 
     #work-profile .big-project{
-        height: 300px;
+        height: 25vh;
     }
-    #work-profile .small-project{
-        height: 50px;
-        width: 50vw;
+    #work-profile .small-projects{
+        min-width: 90%;
+        height: 25vh;
+        transition: height 1s linear;
     }
 
     /*Change contact list to vertical column*/
@@ -311,3 +329,6 @@ footer h2 {
         color: var(--linkhlcolor);
     }
 }
+
+
+

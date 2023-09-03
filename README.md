@@ -10,8 +10,13 @@ The webpage should include the following information about a potential job candi
 - A brief intro of the candidate
 - A list of previous work portfolios (placeholder only)
 - Some basic contact details (dummy)
+- The webpage should change to column layout when width of screensize reduces to less than 768px
 
-Screenshot of webpage 
+Screenshot of webpage in full width:
+![Preview of webpage in full width](assets/images/screenshot_full_width.jpeg)
+
+Screenshot of webpage on narrow screen:
+![Preview of webpage on narrow screen](assets/images/screenshot_768px.jpeg)
 
 ## Dependencies
 

@@ -22,7 +22,17 @@ Screenshot of webpage
 * Open url link https://amethystlyre.github.io/Potential-candidate-profile/ in above mention browser
 
 ## Credits
-N/A
+1. Andres Jimenez (Tutor) for HTML meta code in header:
+
+    `<meta name="viewport" content="width=device-width,initial-scale=1.0">`
+
+2. Xah Lee for twitter icon link in CSS :
+
+    `a[href*="twitter.com/"] {
+    background:url(https://twitter.com/favicon.ico) no-repeat left center;
+    padding-left:19px;}`
+
+    [CSS: Add Icon to Links](http://xahlee.info/js/css_add_icon_to_link.html)
 
 ## Version History
 N/A

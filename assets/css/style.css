@@ -147,7 +147,6 @@ section {
 /*other smaller sized projects listed below*/
 #work-profile .small-projects {
     background-color: rgba(144, 20, 20, 0.744);
-    background-image: url("../images/other_project.jpg");
     background-position: center center;
     background-size: 100%;
     background-blend-mode: multiply;
@@ -160,6 +159,24 @@ section {
     flex-wrap: wrap;
     flex-grow: 1;
 }
+
+/*A list of individual images for each small project tile*/
+#work-profile .section-content >:nth-child(2){
+    background-image: url("../images/other_project.jpg");
+}
+
+#work-profile .section-content >:nth-child(3){
+    background-image: url("../images/other_project2.png");
+}
+
+#work-profile .section-content >:nth-child(4){
+    background-image: url("../images/other_project3.png");
+}
+
+#work-profile .section-content >:nth-child(5){
+    background-image: url("../images/other_project4.jpg");
+}
+
 
 /*Add hover effect over the individual project image*/
 #work-profile figure:hover {

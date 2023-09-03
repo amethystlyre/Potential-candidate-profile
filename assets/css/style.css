@@ -1,3 +1,4 @@
+/*Import Google web font*/
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
 
 /*Declare variables*/
@@ -81,7 +82,7 @@ header {
     background-image: radial-gradient(farthest-corner at 0px 0%,
             rgb(255, 249, 196) 0%,
             rgb(218, 181, 69) 70%,
-            rgb(105, 3, 3) 100%);
+            rgb(144, 20, 20) 100%);
 }
 
 /*set individual sections as flex rows*/
@@ -103,7 +104,6 @@ section {
     padding-top: 10px;
 }
 
-
 /*Adjust the property of content for each section*/
 .section-content {
     margin: 5px;
@@ -120,7 +120,6 @@ section {
 #about-me p {
     line-height: 1.5em;
 }
-
 
 /*Set some spacing in between each project*/
 .section-content figure {
@@ -144,7 +143,6 @@ section {
     flex-grow: 1;
 }
 
-
 /*other smaller sized projects listed below*/
 #work-profile .small-projects {
     background-color: rgba(144, 20, 20, 0.744);
@@ -153,7 +151,7 @@ section {
     background-size: 100%;
     background-blend-mode: multiply;
     position: relative;
-    min-width: 50vh;
+    min-width: 50vw;
     min-height: 40vh;
     border: 5px solid var(--themecolor);
     display: flexbox;
@@ -161,7 +159,6 @@ section {
     flex-wrap: wrap;
     flex-grow: 1
 }
-
 
 /*Add hover effect over the individual project image*/
 #work-profile figure:hover {
@@ -225,7 +222,21 @@ section {
     color: var(--linkhlcolor);
 }
 
+/*Add icon for twitter and github*/
+a[href*="twitter.com"] {
+    background:url(https://twitter.com/favicon.ico);
+    background-repeat: no-repeat;
+    background-position: left center ;
+    padding-left:18px;
+    }
 
+a[href*="github.com"] {
+    background:url(https://github.com/favicon.ico);
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: left center ;
+    padding-left:18px;
+    }
 
 /*Center align the footer*/
 footer h2 {
@@ -235,4 +246,68 @@ footer h2 {
     font-size: 1.5em;
     background-color: var(--primarybgcolor);
     color: var(--textcolorlight);
+}
+
+/*Change nav list and content to display in column when screen width reduces to 748px wide*/
+@media screen and (max-width: 768px) {
+    /*Change nav bar to vertical and aligned to left*/
+    .header{
+        display: block;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height:300px;        
+    }
+
+    .header nav{
+        float: left;
+        margin: 5px;
+        padding: 5px;
+        position:absolute;
+    }
+
+    .header ul,section {
+        display: block;
+        flex-direction: column;
+        justify-content: start;
+        margin: 10px;
+      }
+
+    .header li{
+        margin: 10px;
+        padding: 2px;
+    }
+
+    .banner h2{
+        display:block;
+        position: absolute;
+        top: -40px;
+    }
+
+    /*Change position of section title to top center*/
+    .content .section-title{
+        width: 100%;
+        text-align: center;
+        border-right:none;
+        border-bottom: 3px solid var(--bordercolor);
+    }
+
+    #work-profile .big-project{
+        height: 300px;
+    }
+    #work-profile .small-project{
+        height: 50px;
+        width: 50vw;
+    }
+
+    /*Change contact list to vertical column*/
+    #contact ul{
+        flex-direction: column;
+        justify-content: center;
+    }
+    #contact li a{
+        color: var(--textcolordark);
+    }
+    #contact li a:hover{
+        color: var(--linkhlcolor);
+    }
 }

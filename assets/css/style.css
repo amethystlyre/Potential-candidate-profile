@@ -133,6 +133,7 @@ section {
     background-size: 100%;
     background-position: top center;
     background-blend-mode: multiply;
+    background-repeat:no-repeat;
     position: relative;
     height: 60vh;
     width: 90%;
@@ -151,7 +152,7 @@ section {
     background-size: 100%;
     background-blend-mode: multiply;
     position: relative;
-    min-width: 50vw;
+    min-width: 50vh;
     min-height: 40vh;
     border: 5px solid var(--themecolor);
     display: flexbox;

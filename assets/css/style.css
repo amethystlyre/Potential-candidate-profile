@@ -130,7 +130,7 @@ section {
 #work-profile .big-project {
     background-color: rgba(144, 20, 20, 0.744);
     background-image: url("../images/main_project_cropped.jpg");
-    background-size: 100%;
+    background-size: cover;
     background-position: top center;
     background-blend-mode: multiply;
     position: relative;
@@ -148,7 +148,7 @@ section {
 #work-profile .small-projects {
     background-color: rgba(144, 20, 20, 0.744);
     background-position: center center;
-    background-size: 100%;
+    background-size: cover;
     background-blend-mode: multiply;
     position: relative;
     min-width: 40%;

@@ -152,6 +152,7 @@ section {
     background-size: cover;
     background-blend-mode: multiply;
     position: relative;
+    /*small project takes up half the content section width minus 10px margin on left and right*/
     flex: 0 0 calc(50% - 20px);
     width: calc(50% - 20px);
     height: 40vh;

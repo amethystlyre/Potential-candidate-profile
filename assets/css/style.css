@@ -112,8 +112,8 @@ section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    flex: 1 1 500px;
+    justify-content: space-evenly;
+    flex: 1 1 100%;
 }
 
 /*Adjust the line height for the About Me text*/
@@ -141,7 +141,8 @@ section {
     flex-direction: row;
     flex-wrap: wrap;
     flex-grow: 1;
-    transition: height 1s linear;
+    /* when the screen resizes, transition to new height value*/
+    transition: all 2s linear;
 }
 
 /*other smaller sized projects listed below*/
@@ -151,13 +152,15 @@ section {
     background-size: cover;
     background-blend-mode: multiply;
     position: relative;
-    min-width: 40%;
+    flex: 0 0 calc(50% - 20px);
+    width: calc(50% - 20px);
     height: 40vh;
     border: 5px solid var(--themecolor);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     flex-grow: 1;
+    transition: flex-basis 2s linear;
 }
 
 /*A list of individual images for each small project tile*/
@@ -271,13 +274,16 @@ footer h2 {
     #work-profile .big-project{
         height: 40vh;
         width: 90%;
-        /* when the screen resizes, transition to new height value*/
-        transition: height 1s linear;
+        /* border: 1px solid black; */
     }
 
     #work-profile .small-projects{
-        min-width: 90%;
-        transition: height 1s linear;
+        width: calc(100% - 20px);
+        flex: 0 0 calc(100% - 20px);
+    }
+
+    .section-content{
+        border: 1px solid black;
     }
   }
 
@@ -327,11 +333,11 @@ footer h2 {
 
     #work-profile .big-project{
         height: 25vh;
+        width: 90%;
     }
     #work-profile .small-projects{
-        min-width: 90%;
+        width: 90%;
         height: 25vh;
-        transition: height 1s linear;
     }
 
     /*Change contact list to vertical column*/
